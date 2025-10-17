@@ -1,8 +1,8 @@
-# TheraPT: Transformer-based Empathetic Dialogue System
+# TheraP-T: Transformer-based GPT-2 Fine-tuned Empathetic Dialogue System
 
 ## Overview
 
-TheraPT is a lightweight, empathetic AI chatbot designed to act as a virtual therapist. Built on a fine-tuned GPT-2 Small model, it provides emotional support through multi-turn conversations while maintaining context over long interactions. The system addresses key challenges in mental health AI by ensuring empathy, coherence, and efficiency—running even on standard laptops without high-end hardware.
+TheraPT is a lightweight, empathetic AI chatbot designed to act as a virtual therapist. Built on a fine-tuned GPT-2 Small model, it provides emotional support through multi-turn conversations while maintaining context over long interactions. The system addresses key challenges in mental health AI by ensuring empathy, coherence, and efficiency, running even on standard laptops without high-end hardware.
 
 Key highlights:
 - **Empathetic Responses**: Generates contextually appropriate, supportive replies based on therapeutic dialogue patterns.
