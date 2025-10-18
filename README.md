@@ -10,8 +10,7 @@ Key highlights:
 - **Reasoning Integration**: Explored chain-of-thought prompting to enhance thoughtful responses (though challenges were encountered in dataset adaptation).
 - **Performance**: Achieved a BERTScore F1 of 0.8948 for semantic similarity, with manual testing confirming empathetic and relevant outputs.
 
-This project was developed as part of the CSE 676 Deep Learning course final project. For a detailed walkthrough, refer to the attached presentation (DL-Project-Presentation.pptx) and code (main.ipynb).
-
+This project was developed as part of the CSE 676 Deep Learning course final project.
 ![](files/TheraPT.png)
 
 ## Features
@@ -36,66 +35,11 @@ The system excels in maintaining empathetic, non-monotonous conversations while 
 - PyTorch (with CUDA support recommended for training)
 - Hugging Face Transformers library
 
-### Setup
-1. Clone the repository:
-
-```
-git clone https://github.com/sreerammelpadi/TheraPT.git
-cd TheraPT
-```
-
-2. Install dependencies:
-
-```
-pip install -r requirements.txt
-
-```
-
-(Note: Create a `requirements.txt` with: `torch`, `transformers`, `datasets`, `pandas`, `nltk`, `bert-score`.)
-
-3. Download datasets (as referenced in the code):
-- Synthetic Therapy Conversations (via Kaggle).
-- Empathetic Dialogues (via Hugging Face).
-
-## Usage
-
-### Training the Model
-Run the Jupyter notebook (`main.ipynb`) to:
-- Preprocess datasets.
-- Fine-tune GPT-2 on therapy dialogues (3 epochs on primary dataset, 1 epoch on secondary with lower learning rate).
-- Integrate BART for summarization.
-
-Example training command (from notebook):
-
-```
-trainer.train()
-```
-
-
-### Running the Chatbot
-Use the interactive loop in the notebook for testing:
-
-```python
-while True:
-    user_input = input("Patient: ")
-    if user_input.lower() == "quit":
-        break
-# Generate response with summarization
-therapist_response = generate_response(prompt)
-print(f"Therapist: {therapist_response}")
-
-```
-
-
 Sample Interaction:
 - **Patient**: I'm feeling disappointed with my job.
 - **Therapist**: Hi Charlie, thank you for reaching out. Can you tell me more about what's been going on? What specifically is causing you to feel this way at work and how it's impacting your overall well-being?
 
 For long conversations, BART summaries ensure context retention.
-
-### Evaluation
-- Run the evaluation section in `main.ipynb` to compute BLEU and BERTScore on generated vs. reference responses.
-- Manual testing: Engage in chats and assess empathy/coherence.
 
 ## Architecture
 
